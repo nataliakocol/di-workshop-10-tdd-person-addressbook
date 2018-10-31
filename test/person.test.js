@@ -1,7 +1,8 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const Person = require('../models/person.js')
+const Person = require('../models/person.js');
+const Pet = require('../models/pet.js');
 
 describe('Person', ()=> {
   it('should initialise properly', ()=> {
@@ -47,4 +48,11 @@ describe('Person', ()=> {
   '- joe@example.com' + '/n' + '- joe.bloggs@workexample.com' + '/n' + '/n' +
   'Phone Numbers:' + '/n' + '- 07712345678' + '/n' + '- 07654321987' + '/n');
     })
+
+  it('should add a pet to a person', ()=> {
+    var person = new Person('Joe', 'Bloggs', '1 Jan 1990');
+    var pet1 = new Pet('Nemo', 'cat')
+    person.addPet(pet1);
+    expect(person.pets).to.deep.equal([pet1]);
+  })
 })

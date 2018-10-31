@@ -5,6 +5,7 @@ class Person {
     this.dob = dob;
     this.emails = [];
     this.phoneNumbers = [];
+    this.pets = [];
   }
 
   fullname() {
@@ -17,6 +18,10 @@ class Person {
 
   addPhoneNumber(phoneNumber) {
     this.phoneNumbers.push(phoneNumber);
+  }
+
+  addPet(pet) {
+    this.pets.push(pet);
   }
 
   returnFormattedDetails() {
@@ -32,6 +37,6 @@ class Person {
 
     return details;
   }
-}
+};
 
 module.exports = Person;

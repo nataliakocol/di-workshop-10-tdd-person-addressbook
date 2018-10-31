@@ -1,9 +1,14 @@
 *Person Project for Ada*
 
+**Person**
 - [X] constructor
 - [X] capitalising first name
 - [X] fullname method
 - [X] emails attribute and addEmail
+
+**AddressBook**
+- [X] create the class with an entries attribute
+- [X] add method which takes a person object
 
 # Workshop: Using TDD to build an AddressBook
 
