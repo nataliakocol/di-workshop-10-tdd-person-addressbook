@@ -4,6 +4,7 @@ class Person {
     this.surname = surname;
     this.dob = dob;
     this.emails = [];
+    this.phoneNumbers = [];
   }
 
   fullname() {
@@ -12,6 +13,24 @@ class Person {
 
   addEmail(email) {
     this.emails.push(email);
+  }
+
+  addPhoneNumber(phoneNumber) {
+    this.phoneNumbers.push(phoneNumber);
+  }
+
+  returnFormattedDetails() {
+    var details = this.fullname() + '/n' + '----------' + '/n' + 'DOB: ' + this.dob +
+    '/n' + '/n' + 'Email Addresses:' + '/n';
+    for(var i of this.emails) {
+      details += '- ' + i + '/n';
+    }
+    details += '/n' + 'Phone Numbers:' + '/n';
+    for(var i of this.phoneNumbers) {
+      details += '- ' + i + '/n';
+    }
+
+    return details;
   }
 }
 
