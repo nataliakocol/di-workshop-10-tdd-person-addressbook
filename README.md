@@ -1,3 +1,10 @@
+*Person Project for Ada*
+
+- [X] constructor
+- [X] capitalising first name
+- [X] fullname method
+- [X] emails attribute and addEmail
+
 # Workshop: Using TDD to build an AddressBook
 
 This workshop builds on the previous TDD workshop.
